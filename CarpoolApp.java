@@ -18,7 +18,7 @@ public class CarpoolApp extends UserDAO {
             System.out.println("1. Login");
             System.out.println("2. Exit");
             int choice = scanner.nextInt();
-            scanner.nextLine(); // Consume newline
+            scanner.nextLine(); 
 
             if (choice == 1) {
                 login();
@@ -68,7 +68,7 @@ public class CarpoolApp extends UserDAO {
         System.out.println("3. Give Feedback");
         System.out.println("4. Logout");
         int choice = scanner.nextInt();
-        scanner.nextLine(); // Consume newline
+        scanner.nextLine(); 
 
         switch (choice) {
             case 1:
@@ -78,7 +78,7 @@ public class CarpoolApp extends UserDAO {
                 ((Driver) currentUser).viewMyRides();
                 break;
             case 3:
-                giveFeedback(); // Updated method
+                giveFeedback(); 
                 break;
             case 4:
                 currentUser = null;
@@ -99,7 +99,7 @@ public class CarpoolApp extends UserDAO {
         String dateTime = scanner.nextLine();
         System.out.print("Enter number of seats available: ");
         int seatsAvailable = scanner.nextInt();
-        scanner.nextLine(); // Consume newline
+        scanner.nextLine(); 
 
         ((Driver) currentUser).createRide(startLocation, endLocation, dateTime, seatsAvailable);
     }
@@ -112,7 +112,7 @@ public class CarpoolApp extends UserDAO {
         System.out.println("4. Give Feedback");
         System.out.println("5. Logout");
         int choice = scanner.nextInt();
-        scanner.nextLine(); // Consume newline
+        scanner.nextLine(); 
 
         switch (choice) {
             case 1:
@@ -125,7 +125,7 @@ public class CarpoolApp extends UserDAO {
                 cancelBooking();
                 break;
             case 4:
-                giveFeedback(); // Updated method
+                giveFeedback(); 
                 break;
             case 5:
                 currentUser = null;
@@ -144,7 +144,7 @@ public class CarpoolApp extends UserDAO {
         // Prompt the user to enter the ride ID they want to book
         System.out.print("Enter Ride ID to book: ");
         int rideId = scanner.nextInt();
-        scanner.nextLine(); // Consume newline
+        scanner.nextLine(); 
 
         // Call the method to update the ride booking
         boolean success = updateRideBooking(rideId, currentUser.getId());
@@ -177,7 +177,7 @@ public class CarpoolApp extends UserDAO {
         ((Rider) currentUser).viewMyBookings();
         System.out.print("Enter ride ID to cancel: ");
         int rideIdToCancel = scanner.nextInt();
-        scanner.nextLine(); // Consume newline
+        scanner.nextLine(); 
         boolean success = UserDAO.canceLBooking(currentUser.getId(), rideIdToCancel);
 
         if (success) {
@@ -196,20 +196,20 @@ public class CarpoolApp extends UserDAO {
         System.out.println("5. View All Feedback");
         System.out.println("6. Logout");
         int choice = scanner.nextInt();
-        scanner.nextLine(); // Consume newline
+        scanner.nextLine(); 
 
         switch (choice) {
             case 1:
-                createUser(); // Existing method
+                createUser(); 
                 break;
             case 2:
-                removeUser(); // Existing method
+                removeUser(); 
                 break;
             case 3:
                 ((Admin) currentUser).viewAllUsers();
                 break;
             case 4:
-                viewFeedback(); // New method
+                viewFeedback(); 
                 break;
             case 5:
             	viewAllFeedback();
@@ -232,7 +232,7 @@ public class CarpoolApp extends UserDAO {
     private static void removeUser() {
         System.out.print("Enter user ID to remove: ");
         int userId = scanner.nextInt();
-        scanner.nextLine(); // Consume newline
+        scanner.nextLine(); 
 
         ((Admin) currentUser).removeUser(userId);
     }

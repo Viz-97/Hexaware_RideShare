@@ -284,7 +284,7 @@ public class UserDAO {
     public void getFeedbackForRide() {
         System.out.print("Enter ride ID to retrieve feedback: ");
         int rideId = scanner.nextInt();
-        scanner.nextLine(); // Consume newline
+        scanner.nextLine(); 
 
         List<Feedback> feedbackList = new ArrayList<>();
         try (Connection conn = Database.getConnection();

@@ -21,10 +21,12 @@ The RideShare application is an AI-powered platform designed to streamline commu
    git clone https://github.com/yourusername/rideshare-app.git
 
 
-### How to Use
+## How to Use
 
 - **Save the content** into a file named `README.md`.
 - **Place it in the root directory** of your repository.
 - **Commit and push** the file to your GitHub repository.
 
+## License
+- This project is licensed under the MIT License - see the LICENSE.md file for details.
 This README file provides an overview of the project, instructions for installation, usage guidelines, and contribution details.

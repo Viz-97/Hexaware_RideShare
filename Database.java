@@ -4,9 +4,9 @@ import java.sql.SQLException;
 
 public class Database {
     private static final String URL = "jdbc:mysql://localhost:3306/hexapool";
-    private static final String USER = "root";  // Replace with your database username
-    private static final String PASSWORD = "";  // Replace with your database password
-
+    private static final String USER = "root";  
+    private static final String PASSWORD = "";  
+    
     static {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");

@@ -3,7 +3,7 @@
 
 ## Database Setup
 
-Follow the instructions below to set up the SQL database for the Hexapool application:
+Follow the instructions below to set up the SQL database for the Hexaware carpool application:
 
 ### Step 1: Create the Database
 
@@ -73,7 +73,7 @@ INSERT INTO users (name, email, password, userType) VALUES
 
 
 
-This README file provides an overview of the project, instructions for installation, usage guidelines, and contribution details.
+This README file provides an overview of the project, instructions for installation, usage guidelines.
 
 
 This setup guide provides a simple, minimal configuration for your SQL database, ensuring that the initial users, rides, bookings, and feedback are set up for your application's basic operation.

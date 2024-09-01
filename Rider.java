@@ -24,10 +24,10 @@ public class Rider extends User {
                            "JOIN bookings b ON r.id = b.ride_id " +
                            "WHERE b.rider_id = ?";
             PreparedStatement stmt = conn.prepareStatement(query);
-            stmt.setInt(1,getId()); // Assuming 'id' is the rider's ID
+            stmt.setInt(1,getId()); 
             ResultSet rs = stmt.executeQuery();
 
-            if (!rs.isBeforeFirst()) { // Check if no results
+            if (!rs.isBeforeFirst()) { 
                 System.out.println("You have not booked any rides.");
             } else {
                 System.out.println("Your booked rides:");
@@ -51,6 +51,6 @@ public class Rider extends User {
 
 
     public void cancelBooking(int rideId) {
-        // Implementation to cancel a booking
+        
     }
 }
